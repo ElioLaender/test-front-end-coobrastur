@@ -1,0 +1,118 @@
+.customer-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    .main-container {
+        width: 76%;
+        margin-bottom: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        hr {
+            width: 100%;
+            border: 1px solid #E9E9E9;
+        }
+
+        .form-control-group {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                padding-left: 5px;
+                color: #534C4C;
+            }
+
+            input {
+                width: 370px;
+                height: 40px;
+                border: 1px solid #D9D9D9;
+                background-color: #FFFFFF;
+                padding-left: 12px;
+                border-radius: 10px;
+            }
+
+            .form-actions {
+
+                button {
+                    width: 134px;
+                    height: 44px;
+                    color:  #FFFFFF;
+                    background-color: #08436F;
+                    margin-right: 25px;
+                    border:none;
+                    border-radius: 5px;
+                }
+    
+                .back-button {
+                    width: 134px;
+                    height: 44px;
+                    color:  #08436F;
+                    background-color: #FFFFFF;
+                    border: 1px solid #08436F;
+                    border-radius: 5px;
+                }
+        
+                *:disabled {
+                    background-color: #34495e;
+                }
+
+            }
+
+    
+            *:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .customer-message {
+        
+        b {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            color: #636e72;
+        }
+
+        span {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: #666666
+        }
+    }
+    
+}
+
+// Mobile
+@media(max-width:456px) {
+    
+    .customer-container{
+
+        .main-container {
+
+            .form-control-group {
+
+                input {
+                    width: 100%;
+                    display: flex;
+                }
+
+                .form-actions {
+                    margin-top: 20px;
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+            
+                    button, .back-button {
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

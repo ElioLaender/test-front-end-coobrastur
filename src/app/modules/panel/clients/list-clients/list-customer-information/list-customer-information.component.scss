@@ -1,0 +1,158 @@
+ul {
+    list-style-type: none;
+}
+
+.item-list {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 25px;
+    border: 1px solid #E5E5E5;
+
+    .profile-picture {
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        img {
+            width: 55px;
+            height: 55px;
+            border-radius: 27.5px;
+        }
+    }
+
+    .email {
+        width: 15%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .name {
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        color: #08436F;
+    }
+  
+    .action {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 30px;
+        button {
+            background-color: #ffffff;
+            width: 134px;
+            height: 45px;
+            color: #08436F;
+            border: 1px solid #08436F;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: #08436F;
+            color:  #FFFFFF;
+        } 
+    }
+}
+
+.item-list:hover {
+    background-color: #f5f6fa;
+}
+
+.list-footer {
+    span {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 20px;
+        color: #534C4C;
+    }
+}
+
+.pagination-actions {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        background-color: #ffffff;
+        width: 104px;
+        height: 34.93px;
+        margin-left: 25px;
+        color: #08436F;
+        border: 1px solid #08436F;
+        border-radius: 5px;
+    }
+}
+
+// Mobile
+@media(max-width:1286px) {
+ 
+    .item-list {
+
+        .profile-picture {
+            width: 25%;
+        }
+    
+        .email {
+            width: 25%;
+        }
+    
+        .name {
+            width: 25%;
+        }
+
+        .action {
+            width: 25%;
+        }
+    }
+}
+
+@media(max-width:982px) {
+ 
+    .item-list {
+        flex-direction: column;
+        align-items: center;
+
+        .profile-picture {
+            width: 100%;
+            margin-top: 10px;
+        }
+    
+        .email {
+            width: 100%;
+            margin-top: 10px;
+        }
+    
+        .name {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .action {
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+            margin-right: 0;
+
+            button {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .pagination-actions {
+        margin-top: 20px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+        button {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+}

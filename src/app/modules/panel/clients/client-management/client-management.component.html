@@ -1,0 +1,67 @@
+<div class="customer-container">
+
+    <div class="main-container">
+
+        <app-clients-header title="PAINEL DE CLIENTES"></app-clients-header>
+
+        <hr><br>
+    
+        <div *ngIf="this.isUpdate == false" class="customer-message">
+            <b>Novo cliente</b><br>
+            <span>Informe os campos a seguir para cadastrar um novo cliente: </span>
+        </div>
+
+        <div *ngIf="this.isUpdate == true" class="customer-message">
+            <b>Editar cliente</b><br>
+            <span>Informe os campos para alterar os dados: </span>
+        </div>
+
+        <br>
+
+        <b *ngIf="this.loadRequest">Carregando...</b>
+
+        <form *ngIf="!this.loadRequest" [formGroup]="clientForm" (submit)="submitForm()">
+            <div class="form-control-group">
+                <label class="label" for="name">Nome:</label>
+                <input
+                    id="name"
+                    formControlName="name"
+                    type="text"
+                    placeholder="Informe o nome"> 
+
+                    <app-vmessage 
+                        *ngIf="clientForm.get('name').errors?.required && this.clientAttemp"
+                        text="Campo nome é necessário">
+                    </app-vmessage>
+     
+                <br>
+                <label class="label" for="profession">Profissão:</label>
+                <input 
+                    id="profession"
+                    formControlName="profession"
+                    type="profession"
+                    placeholder="Informe a profissão">
+
+                    <app-vmessage 
+                        *ngIf="clientForm.get('profession').errors?.required && this.clientAttemp"
+                        text="Campo profissão é necessário">
+                    </app-vmessage>
+                
+                <br>
+                
+                <div class="form-actions">
+                    <button 
+                        type="submit"> 
+                        Cadastrar
+                    </button>
+
+                    <button class="back-button" [routerLink]="['/painel/clientes/lista-de-clientes']"> 
+                        Voltar
+                    </button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+</div>
